@@ -1,0 +1,41 @@
+version: '3.8'
+
+networks:
+  prox-network:
+
+services:
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - prox-network
+
+  push-api:
+    image: prom/prometheus 
+    container_name: traefik-api
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.api.rule=Host(`api-william.esoko.com`)"
+      - "traefik.http.services.api.loadbalancer.server.port=9090"
+    networks:
+      - prox-network
+
+  push-web:
+    image: grafana/grafana-enterprise
+    container_name: traefik-web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`web-william.esoko.com`)"
+      - "traefik.http.services.web.loadbalancer.server.port=3000"
+    networks:
+      - prox-network
+

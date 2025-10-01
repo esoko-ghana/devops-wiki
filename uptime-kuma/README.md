@@ -25,6 +25,7 @@ The directory should be structured as:
     └── docker-compose.yml   
 
 ***Docker Compose Configuration***
+
 Save the following configuration as docker-compose.yml:
 
 version: '3.8'
@@ -78,6 +79,7 @@ You’ll be prompted to create an admin account on first launch.
       docker-compose up -d
 
 ***Best Practices***
+
     • Regularly back up /srv/uptime-kuma/data.
     • Limit firewall access if exposed to the internet or place it behind the Esoko VPN and configure the firewall to only allow connections from the VPN subnet.
 

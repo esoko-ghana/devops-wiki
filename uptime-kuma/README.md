@@ -1,16 +1,16 @@
-Uptime Kuma Deployment with Docker Compose Documentation
+**Uptime Kuma Deployment with Docker Compose Documentation**
 
-Overview
+***Overview***
 
 Uptime Kuma is a self-hosted monitoring tool, It allows you to track uptime, response time, and service availability for websites, APIs, servers, and other networked resources.
 This guide shows how to deploy Uptime Kuma on TestServer – 10.1.1.221 using a simple Docker Compose configuration.
 
-Prerequisites
+***Prerequisites***
     • A Linux server or VM (Ubuntu Server OS)
     • Docker installed
     • Docker Compose installed
 
-Directory Setup
+***Directory Setup***
 
 Create a directory to store Uptime Kuma’s persistent data:
 - sudo mkdir -p /srv/uptime-kuma/data
@@ -24,7 +24,7 @@ The directory should be structured as:
     ├── data/                  
     └── docker-compose.yml   
 
-Docker Compose Configuration
+***Docker Compose Configuration***
 Save the following configuration as docker-compose.yml:
 
 version: '3.8'
@@ -38,7 +38,7 @@ services:
       - "82:3001"
     restart: always
 
-Explanation of Configuration
+***Explanation of Configuration***
 
     • version: '3.8' → Docker Compose file format version.
     • image: louislam/uptime-kuma → Official Uptime Kuma Docker image.
@@ -47,7 +47,7 @@ Explanation of Configuration
     • ports: "82:3001"  Maps host port 82 to container port 3001 (default Kuma web UI).
     • restart: always → Ensures container auto-restarts on reboot or failure.
 
-Deploying Uptime Kuma
+***Deploying Uptime Kuma***
 
 Run:
 docker-compose up -d
@@ -65,7 +65,7 @@ http://10.1.1.221:82
 
 You’ll be prompted to create an admin account on first launch.
 
-Managing Uptime Kuma
+***Managing Uptime Kuma***
 
     • Start service:
       docker-compose up -d
@@ -77,7 +77,7 @@ Managing Uptime Kuma
       docker-compose pull
       docker-compose up -d
 
-Best Practices
+***Best Practices***
     • Regularly back up /srv/uptime-kuma/data.
     • Limit firewall access if exposed to the internet or place it behind the Esoko VPN and configure the firewall to only allow connections from the VPN subnet.
 

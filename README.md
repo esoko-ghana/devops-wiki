@@ -37,7 +37,3 @@ This wiki aims to:
 
 ---
 
-
-
-### 💡 Tip
-If you’re new, start with the **[Getting Started Guide](../../wiki/Getting-Started)**.

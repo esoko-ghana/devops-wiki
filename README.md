@@ -9,12 +9,12 @@ It is intended to help team members and contributors quickly find documentation,
 
 ## Contents
 - **CI/CD** – Jenkins
-- **Infrastructure as Code (IaC)** – Terraform, Ansible, etc.
-- **Containerization** – Docker Swarm, Kubernetes,
-- **Monitoring & Logging** – Portainer,Uptime-Kuma, Dozzle
-- **Cloud Providers** – AWS configurations and tips
-- **Security & Compliance** – DevSecOps practices, secrets management
-- **Best Practices** – Coding standards, branching strategies, automation tips
+- **Infrastructure as Code (IaC)** – Terraform, Ansible.
+- **Containerization** – Docker Swarm, Kubernetes.
+- **Monitoring & Logging** – Portainer,Uptime-Kuma, Dozzle.
+- **Cloud Providers** – AWS configurations and tips.
+- **Security & Compliance** – DevSecOps practices, secrets management.
+- **Best Practices** – Coding standards, branching strategies, automation tips.
 
 ---
 

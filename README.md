@@ -8,9 +8,9 @@ It is intended to help team members and contributors quickly find documentation,
 ---
 
 ## Contents
-- **CI/CD** – Continuous Integration & Deployment workflows
-- **Infrastructure as Code (IaC)** – Terraform, Ansible, CloudFormation, etc.
-- **Containerization** – Docker, Kubernetes, Helm
+- **CI/CD** – Jenkins
+- **Infrastructure as Code (IaC)** – Terraform, Ansible, etc.
+- **Containerization** – Docker Swarm, Kubernetes,
 - **Monitoring & Logging** – Portainer,Uptime-Kuma, Dozzle
 - **Cloud Providers** – AWS configurations and tips
 - **Security & Compliance** – DevSecOps practices, secrets management
@@ -18,18 +18,18 @@ It is intended to help team members and contributors quickly find documentation,
 
 ---
 
-##  How to Use
+## How to Use
 - Navigate through the Wiki Tab for detailed articles.
 - Use the search bar to quickly find topics.
 
 
-## 🤝 Contributing
+## Contributing
 We welcome contributions!  
 - Create a branch for your changes.
 - Add or update documentation.
 - Submit a pull request for review.
 
-## 📌 Purpose
+## Purpose
 This wiki aims to:
 - Standardize DevOps knowledge within the team.
 - Serve as a quick reference for troubleshooting and setups.
